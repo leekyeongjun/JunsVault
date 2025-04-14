@@ -1,7 +1,5 @@
 
 ---
-
-
 # Index
 
 - [Index](#index)
