@@ -1,55 +1,7 @@
 # Index
----
-- [Index](#index)
-- [Introduction](#introduction)
-  - [Purpose](#purpose)
-  - [System Spec](#system-spec)
-    - [기기 사양](#기기-사양)
-    - [xv6 정보](#xv6-정보)
-  - [Implementation Schedule](#implementation-schedule)
-- [Design](#design)
-  - [1. Understandings of Basic RR scheduler in xv6](#1-understandings-of-basic-rr-scheduler-in-xv6)
-  - [2. FCFS (First-come-First-served) Scheduler Implementation](#2-fcfs-first-come-first-served-scheduler-implementation)
-    - [1. Specification](#1-specification)
-    - [2. Algorithm](#2-algorithm)
-      - [어떻게 FCFS 스케줄러를 구현할까?](#어떻게-fcfs-스케줄러를-구현할까)
-      - [Modifying the Iterator, `p`](#modifying-the-iterator-p)
-      - [System call을 통해 특정 프로세스가 `yield` 한 경우, FCFS 스케줄러는 어떻게 동작해야 할까?](#system-call을-통해-특정-프로세스가-yield-한-경우-fcfs-스케줄러는-어떻게-동작해야-할까)
-  - [3. MLFQ (Multiple level feedback queue) \& Priority Scheduling](#3-mlfq-multiple-level-feedback-queue--priority-scheduling)
-    - [1. Specification](#1-specification-1)
-    - [2. Algorithm](#2-algorithm-1)
-      - [MLFQ 스케줄러를 어떻게 구현해야 할까?](#mlfq-스케줄러를-어떻게-구현해야-할까)
-      - [Multiple iteration - lock problem](#multiple-iteration---lock-problem)
-        - [Scheduler가 Context switching 할 process를 선택한 경우](#scheduler가-context-switching-할-process를-선택한-경우)
-        - [Scheduler가 Context switching을 할 process를 선택하지 못한 경우](#scheduler가-context-switching을-할-process를-선택하지-못한-경우)
-  - [4. Mode Switch between FCFS \& MLFQ Mode](#4-mode-switch-between-fcfs--mlfq-mode)
-    - [1. Specification](#1-specification-2)
-    - [2. Algorithm](#2-algorithm-2)
-      - [FCFS Scheduler와 MLFQ Scheduler의 통합](#fcfs-scheduler와-mlfq-scheduler의-통합)
-- [Implementation](#implementation)
-  - [1. FCFS Scheduler](#1-fcfs-scheduler)
-    - [전역변수 및 함수 설명](#전역변수-및-함수-설명)
-      - [`kernel/proc.c`](#kernelprocc)
-    - [`scheduler()`](#scheduler)
-    - [Related System call](#related-system-call)
-      - [`kernel/mysyscall.c`](#kernelmysyscallc)
-  - [2. MLFQ Scheduler](#2-mlfq-scheduler)
-    - [전역변수 및 함수 설명](#전역변수-및-함수-설명-1)
-      - [`kernel/proc.h`](#kernelproch)
-      - [`kernel/proc.c`](#kernelprocc-1)
-      - [`kernel/trap.c`](#kerneltrapc)
-    - [`scheduler()`](#scheduler-1)
-    - [Related System call](#related-system-call-1)
-      - [`kernel/mysyscall.c`](#kernelmysyscallc-1)
-  - [3. Mode change](#3-mode-change)
-    - [전역변수 및 함수 설명](#전역변수-및-함수-설명-2)
-      - [`kernel/proc.c`](#kernelprocc-2)
-    - [`scheduler()`](#scheduler-2)
-    - [Related System call](#related-system-call-2)
-      - [`kernel/mysyscall.c`](#kernelmysyscallc-2)
-- [Results](#results)
-- [Troubleshooting](#troubleshooting)
----
+
+
+
 # Introduction
 
 ## Purpose
@@ -74,7 +26,7 @@
 RISC-V 버전 xv6
 Git classroom에 업로드된 xv6 소프트웨어를 clone 하여 구현하였음.
 
-clone address : ""
+clone address : "https://github.com/splab-ELE3021/project01-2019092824.git"
 ```
 
 ## Implementation Schedule
