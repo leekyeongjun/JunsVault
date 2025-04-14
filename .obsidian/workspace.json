@@ -11,14 +11,14 @@
             "id": "39fb517ef6b3fe55",
             "type": "leaf",
             "state": {
-              "type": "split-diff-view",
+              "type": "markdown",
               "state": {
-                "aFile": ".obsidian/workspace.json",
-                "bFile": ".obsidian/workspace.json",
-                "aRef": ""
+                "file": "git test.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "diff",
-              "title": "Diff: workspace.json"
+              "icon": "lucide-file",
+              "title": "git test"
             }
           }
         ]
@@ -178,9 +178,9 @@
   },
   "active": "39fb517ef6b3fe55",
   "lastOpenFiles": [
+    "OS_project01_wiki_2019092824.pdf",
     "git test.md",
     "졸업사정 정리.md",
-    "OS_project01_wiki_2019092824.pdf",
     "2025-1/OS/OS_project01_wiki_2019092824.md",
     "2025-1/OS/OS_project1.md",
     "2025-1/OS/OS_project01_wiki_2019092824.html",
@@ -222,7 +222,6 @@
     "2025-1/OPIC/Clara_7강 - 공원가기.md",
     "2025-1/OPIC/Clara_6강 - 영화 관람.md",
     "2025-1/OPIC/Clara_1강 - 자기소개.md",
-    "2025-1/OPIC/Clara 필수강의.md",
-    "2025-1/OPIC/질문 유형별 정리.md"
+    "2025-1/OPIC/Clara 필수강의.md"
   ]
 }
