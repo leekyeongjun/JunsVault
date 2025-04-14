@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2025-1/OS/OS_project01_wiki_2019092824.md",
+                "file": "git test.md",
                 "mode": "source",
                 "source": false
               }
@@ -86,7 +86,7 @@
         "state": {
           "type": "backlink",
           "state": {
-            "file": "2025-1/OS/OS_project01_wiki_2019092824.md",
+            "file": "git test.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
         "state": {
           "type": "outgoing-link",
           "state": {
-            "file": "2025-1/OS/OS_project01_wiki_2019092824.md",
+            "file": "git test.md",
             "linksCollapsed": false,
             "unlinkedCollapsed": true
           }
@@ -115,7 +115,7 @@
         "state": {
           "type": "outline",
           "state": {
-            "file": "2025-1/OS/OS_project01_wiki_2019092824.md"
+            "file": "git test.md"
           }
         }
       },
@@ -139,14 +139,13 @@
       "templates:템플릿 삽입": false,
       "command-palette:명령어 팔레트 열기": false,
       "obsidian-full-calendar:Open Full Calendar": false,
-      "obsidian-excalidraw-plugin:Create new drawing": false,
-      "obsidian-git:Open Git source control": false
+      "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "571b0b17a21dd5d0",
+  "active": "cd303db453dd6eb6",
   "lastOpenFiles": [
-    "Excalidraw/Drawing 2025-04-14 19.21.28.excalidraw.md",
     "2025-1/OS/OS_project01_wiki_2019092824.md",
+    "Excalidraw/Drawing 2025-04-14 19.21.28.excalidraw.md",
     "Excalidraw",
     "git test.md",
     "2025-1/OS/OS_project1.md",
