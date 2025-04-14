@@ -56,5 +56,7 @@
   "lastExportDirectory": {
     "win32": "C:\\Users\\babyn\\OneDrive\\바탕 화면"
   },
-  "lastExportType": "Media Wiki"
+  "pandocPath": {
+    "win32": "C:\\Program Files\\Pandoc\\pandoc.exe"
+  }
 }

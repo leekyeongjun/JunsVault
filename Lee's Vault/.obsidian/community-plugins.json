@@ -4,5 +4,7 @@
   "obsidian-excalidraw-plugin",
   "code-styler",
   "obsidian-enhancing-export",
-  "obsidian-plugin-toc"
+  "obsidian-plugin-toc",
+  "obsidian-pandoc",
+  "obsidian-git"
 ]

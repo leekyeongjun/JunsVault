@@ -19,8 +19,8 @@
 	</style>
 </head>
 <body>
-	<h1>Index</h1>
-<hr>
+	<hr>
+<h1>Index</h1>
 <ul>
 <li><a href="#index">Index</a></li>
 <li><a href="#introduction">Introduction</a>
@@ -151,10 +151,10 @@
 <pre><code>RISC-V 버전 xv6
 Git classroom에 업로드된 xv6 소프트웨어를 clone 하여 구현하였음.
 
-clone address : &quot;&quot;
+clone address : &quot;https://github.com/splab-ELE3021/project01-2019092824.git&quot;
 </code></pre>
 <h2>Implementation Schedule</h2>
-<p><img src="download.png" alt=""></p>
+<p><img src="Images/download.png" alt=""></p>
 <hr>
 <h1>Design</h1>
 <h2>1. Understandings of Basic RR scheduler in xv6</h2>
@@ -254,7 +254,7 @@ P1이 <code>yield()</code>를 해서 CPU를 포기해봤자, 위 scheduling poli
 <p>위 그림처럼 P1이 yield system call로 <code>yield()</code>를 호출했다면, 그 Round에는 P1을 <strong>배제해야 한다.</strong>
 그 이후에 다시 timer interrupt에 의해 <code>yield()</code>가 호출됐다면, 그때 다시 P1을 선택하면 된다.</p>
 <p>왜냐하면 P1은 <code>yield</code>를 한 것이지, <code>SLEEP</code> 이나 <code>TERMINATED</code> 된 것이 아니기 때문이다.
-yield System call이 호출된 시점의 Scheduling에서만 배제하면 된다.</p>
+yield System call이 호출된 시점의 Scheduling Round에서만 배제하면 된다.</p>
 <h2>3. MLFQ (Multiple level feedback queue) &amp; Priority Scheduling</h2>
 <h3>1. Specification</h3>
 <ul>
@@ -282,7 +282,7 @@ yield System call이 호출된 시점의 Scheduling에서만 배제하면 된다
 <p><img src="Pasted%20image%2020250412191615.png" alt=""></p>
 <p>위 삽화는 MLFQ 프로세스의 동작을 도식화한 것이다.
 <code>s</code>는 <code>p</code>를 통한 프로세스 테이블의 탐색이 마무리 된 이후, Context를 switch 할 프로세스를 가리킨다.
-<code>lastpid</code>는 FCFS의 <code>yieldpid</code>와 유사하나, <code>lastpid</code>의 경우 yield system call과 timer interrupt로 인해 호출된 <code>yield()</code>를 구분하지 않고, <code>yield</code>한 프로세스의 pid를 저장하고 있는 변수다.</p>
+<code>lastpid</code>는 FCFS의 <code>yieldpid</code>와 유사하나, <code>lastpid</code>의 경우 yield system call과 timer interrupt로 인해 호출된 <code>yield()</code>를 <strong>구분하지 않고</strong>, <code>yield</code>한 프로세스의 pid를 저장하고 있는 변수다.</p>
 <p>크게 3가지 부분을 중점적으로 살펴보자.</p>
 <ol>
 <li>프로세스의 PCB에는 어떤 데이터가 추가되어야 하는가?
@@ -302,7 +302,7 @@ yield System call이 호출된 시점의 Scheduling에서만 배제하면 된다
 <li>프로세스 전체의 갯수가 64개 이하이고, Queue 갯수가 3개, 그 중 Priority를 쓰는 L2 Queue의 경우 Priority 가 0, 1, 2, 3 4개 이므로
 <ul>
 <li>1(priority boosting) + 1 (tq 소모가 다 안됐을 경우) + 1 (tq 소모 다 한 프로세스 Demotion) + 1 (L0) + 1(L1) + 4(L2 priority 4개) = 9</li>
-<li>최대 576 cycle 이내에 MLFQ 스케줄링은 마무리 된다.
+<li><strong>최대 576 cycle 이내에 MLFQ 스케줄링은 마무리 된다.</strong>
 <ul>
 <li>개발 머신이 2.1Ghz frequency를 가지므로, wsl, qemu등의 속도 저해 요소를 배제하고 xv6가 본 머신의 main OS일 경우 100ms 이내에 스케줄링이 끝난다.</li>
 </ul>
@@ -375,7 +375,7 @@ yield System call이 호출된 시점의 Scheduling에서만 배제하면 된다
 <ul>
 <li><strong>Previous mode는 왜 검사하는가?</strong>
 <ul>
-<li>FCFS Scheduler는 for loop 내부에서 선택될 프로세스를 정하고, <code>swtch()</code>까지 진행한다.</li>
+<li>FCFS Scheduler는 <strong>for loop 내부</strong>에서 선택될 프로세스를 정하고, <code>swtch()</code>까지 진행한다.</li>
 <li>따라서 다음 Scheduling round 가 도달하기 전 모드가 MLFQ로 바뀌더라도, 여전히 Scheduler의 context는 <strong>FCFS의 loop</strong>를 도는 상태로 복귀한다.
 <ul>
 <li>이를 예방하기 위해 FCFS에서 MLFQ로 모드 변환이 발생한 경우 의도적으로 FCFS의 loop를 깨고, 다시 Scheduling Mode를 검사하는 절차가 필요하다.</li>
@@ -737,7 +737,7 @@ struct proc {
 <tbody>
 <tr>
 <td><code>int tq</code></td>
-<td>MLFQ 에서 프로세스 별 사용한 time quantum 값. 0에서 시작하여 점점 증가함.</td>
+<td>MLFQ 에서 프로세스 별 사용한 time quantum 값. 0에서 시작하여 <strong>점점 증가함</strong>.</td>
 <td><code>proc.c</code></td>
 </tr>
 <tr>
@@ -751,7 +751,7 @@ struct proc {
 <td><code>proc.c</code>, <code>mysyscall.c</code></td>
 </tr>
 <tr>
-<td><code>TQ_Qn</code></td>
+<td><code>TQ_QN</code></td>
 <td>MLFQ에서 N번째 큐의 Time quantum limit 값</td>
 <td><code>proc.c</code></td>
 </tr>
