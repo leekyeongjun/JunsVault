@@ -78,7 +78,7 @@ clone address : ""
 ```
 
 ## Implementation Schedule
-![](download.png)
+![](Images/download.png)
 
 ---
 
@@ -198,7 +198,7 @@ System call에 의해 특정 프로세스가 `yield()`를 호출할 경우, 그 
 그 이후에 다시 timer interrupt에 의해 `yield()`가 호출됐다면, 그때 다시 P1을 선택하면 된다.
 
 왜냐하면 P1은 `yield`를 한 것이지, `SLEEP` 이나 `TERMINATED` 된 것이 아니기 때문이다.
-yield System call이 호출된 시점의 Scheduling에서만 배제하면 된다.
+yield System call이 호출된 시점의 Scheduling Round에서만 배제하면 된다.
 
 ## 3. MLFQ (Multiple level feedback queue) & Priority Scheduling
 
@@ -226,7 +226,7 @@ MLFQ는 L0 ~ L3 큐를 순회하며 `RUNNABLE` 한 프로세스를 찾아야 한
 
 위 삽화는 MLFQ 프로세스의 동작을 도식화한 것이다.
 `s`는 `p`를 통한 프로세스 테이블의 탐색이 마무리 된 이후, Context를 switch 할 프로세스를 가리킨다.
-`lastpid`는 FCFS의 `yieldpid`와 유사하나, `lastpid`의 경우 yield system call과 timer interrupt로 인해 호출된 `yield()`를 구분하지 않고, `yield`한 프로세스의 pid를 저장하고 있는 변수다. 
+`lastpid`는 FCFS의 `yieldpid`와 유사하나, `lastpid`의 경우 yield system call과 timer interrupt로 인해 호출된 `yield()`를 **구분하지 않고**, `yield`한 프로세스의 pid를 저장하고 있는 변수다. 
 
 크게 3가지 부분을 중점적으로 살펴보자.
 
@@ -238,7 +238,7 @@ MLFQ는 L0 ~ L3 큐를 순회하며 `RUNNABLE` 한 프로세스를 찾아야 한
 	- Scheduler 내부에서 최소 **1번**, 많으면 **9번** 일어날 수 있다.
 		- 프로세스 전체의 갯수가 64개 이하이고, Queue 갯수가 3개, 그 중 Priority를 쓰는 L2 Queue의 경우 Priority 가 0, 1, 2, 3 4개 이므로
 			- 1(priority boosting) + 1 (tq 소모가 다 안됐을 경우) + 1 (tq 소모 다 한 프로세스 Demotion) + 1 (L0) + 1(L1) + 4(L2 priority 4개) = 9
-			- 최대 576 cycle 이내에 MLFQ 스케줄링은 마무리 된다.
+			- **최대 576 cycle 이내에 MLFQ 스케줄링은 마무리 된다.**
 				- 개발 머신이 2.1Ghz frequency를 가지므로, wsl, qemu등의 속도 저해 요소를 배제하고 xv6가 본 머신의 main OS일 경우 100ms 이내에 스케줄링이 끝난다.
 
 위 모형을 바탕으로 MLFQ 스케줄러의 **Pseudo code**는 아래와 같다.
@@ -294,7 +294,7 @@ MLFQ는 L0 ~ L3 큐를 순회하며 `RUNNABLE` 한 프로세스를 찾아야 한
 위 다이어그램은 FCFS와 MLFQ 스케줄러를 통합한 것이다. 몇가지 살펴볼 점이 있다.
 
 - **Previous mode는 왜 검사하는가?**
-	- FCFS Scheduler는 for loop 내부에서 선택될 프로세스를 정하고, `swtch()`까지 진행한다.
+	- FCFS Scheduler는 **for loop 내부**에서 선택될 프로세스를 정하고, `swtch()`까지 진행한다.
 	- 따라서 다음 Scheduling round 가 도달하기 전 모드가 MLFQ로 바뀌더라도, 여전히 Scheduler의 context는 **FCFS의 loop**를 도는 상태로 복귀한다.
 		- 이를 예방하기 위해 FCFS에서 MLFQ로 모드 변환이 발생한 경우 의도적으로 FCFS의 loop를 깨고, 다시 Scheduling Mode를 검사하는 절차가 필요하다.
 
@@ -533,10 +533,10 @@ struct proc {
 
 | 변수 명             | 역할                                                       | 사용                      |
 | ---------------- | -------------------------------------------------------- | ----------------------- |
-| `int tq`         | MLFQ 에서 프로세스 별 사용한 time quantum 값. 0에서 시작하여 점점 증가함.      | `proc.c`                |
+| `int tq`         | MLFQ 에서 프로세스 별 사용한 time quantum 값. 0에서 시작하여 **점점 증가함**.  | `proc.c`                |
 | `int qnum`       | MLFQ 에서 프로세스의 큐 위치, 0, 1, 2는 각각 L0, L1, L2 큐를 의미함.       | `proc.c`, `mysyscall.c` |
 | `int priority`   | MLFQ, L2 큐 스케줄링에서 사용할 우선도 값 , 초기값은 3으로 시작함.              | `proc.c`, `mysyscall.c` |
-| `TQ_Qn`          | MLFQ에서 N번째 큐의 Time quantum limit 값                       | `proc.c`                |
+| `TQ_QN`          | MLFQ에서 N번째 큐의 Time quantum limit 값                       | `proc.c`                |
 | `TIMEQUANTUM(x)` | MLFQ에서 `qnum`을 넣으면 해당하는 `TQ_Qn` 값으로 치환됨. FCFS 모드일 경우 -1. | `proc.c`                |
 
 #### `kernel/proc.c`
