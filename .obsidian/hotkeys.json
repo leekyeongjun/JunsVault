@@ -21,5 +21,13 @@
   "obsidian-excalidraw-plugin:insert-link-to-element": [],
   "obsidian-excalidraw-plugin:insert-link": [],
   "editor:toggle-checklist-status": [],
-  "editor:save-file": []
+  "editor:save-file": [],
+  "text-snippets-obsidian:text-snippets": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": " "
+    }
+  ]
 }
