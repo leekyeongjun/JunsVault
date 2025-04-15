@@ -16,5 +16,3 @@ state q2
 class q1 f
 class q2 f
 ```
-
-$$\overline{A ∩ B} = Σ^*(Q = λ, w ← )$$ 
