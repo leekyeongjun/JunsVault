@@ -171,7 +171,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 281.5
+    "width": 200,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -188,7 +189,7 @@
       "publish:Publish changes...": false
     }
   },
-  "active": "ddbff9a3a0566c4c",
+  "active": "39fb517ef6b3fe55",
   "lastOpenFiles": [
     "2025-1/OS/OS_project1.md",
     "2025-1/OS/RISC-V ISA (Instruction Set Architecture).md",

@@ -1,3 +1,49 @@
+# Three Basic Concepts
+## Language
+Alphabet을 가지고 만든 임의의 String들의 Subset.
+$L= \{a^{n}b^{n}, n \ge 0\}$
+## Alphabet
+$Σ = \{a,b\}$
+String을 만드는 데 사용하는 Terminal
+## String
+$w = abab, aaabb ...$
+alphabet을 0개 이상 사용하여 만든 문자열
+### Substring
+특정 String에 속하는 String
+- Prefix : $w = abab$, prefix $p = \{a, ab, aba, abab\}$
+- Suffix : $w = abab$, suffix $s = \{b, ba, bab, baba\}$
+# Symbols Dealing With Language, Alphabet and String
+$w = a_{1}a_{2}a_{3}...a_{n}$
+$v =b_{1}b_{2}b_{3}...b_{m}$
+
+- $wv = a_{1}a_{2}a_{3}...a_{n}b_{1}...b_{m}$
+- $w^{R} =a_{n}a_{n-1}a_{n-2}...a_{1}$
+- $|w| = n$
+	- $|λ|=0$
+- $w^{n}$
+	- $w^{0}= λ$
+	- $w^{1}= w$
+	- $w^{2}=ww$
+- $Σ^{*}$
+	- $Σ$안에 있는 모든 alphabet을 써서 만들 수 있는 모든 String의 집합
+		- $λ$포함
+- $Σ^{+} = Σ^{*}-\{λ\}$
+
+$L=\{a,aa,aab\}$
+- $a,aa,aab$ 각각을 sentence라고 한다.
+- $\overline{L} = Σ^{*}-L$
+- 
+# Three Basic Concepts & Deterministic Finite Accepters
+# Regular Languages & NonDeterministic Finite Accepters
+# Equivalence of Deterministic and Nondeterministic Finite Accepter
+# Reduction of the Number of States in Finite Automata
+# Reduction of the Number of States in Finite Automata & Regular Expressions
+# Regular Expressions & Connection Between Regular Expressions and Regular Languages
+# Connection Between Regular Expressions and Regular Languages
+# Regular Grammars
+# Closure Properties of Regular Languages
+# Closure Properties of Regular Languages and Elementary Questions about Regular Languages
+# Identifying Nonregular Languages Part 1
 # Identifying Nonregular Languages
 
 $L = \{a^{n}b^{n}:n\ge 0\}$
@@ -187,7 +233,6 @@ graph TD
 	5((b));
 	6((B));
 	7((b));
-	8((B));
 	
 	9((A));
 	
@@ -202,18 +247,20 @@ graph TD
 	1 --> 4
 	
 	3 --> 5
-	5 --> 6
+	3 --> 6
 	3 --> 7
 	6 --> 9
-	3 --> 8
 
 	9 --> 10
 	9 --> 11
 	9 --> 12
 
-	8 --> 13
+	4 --> 13
 	11 --> 14
 ```
+
+> Parse Tree 가 여러개 나오면 그 문법을 Ambiguous 하다고 하는데, 이는 지양해야 한다.
+
 
 
 
