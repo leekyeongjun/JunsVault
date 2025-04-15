@@ -6,5 +6,6 @@
   "obsidian-enhancing-export",
   "obsidian-plugin-toc",
   "obsidian-pandoc",
-  "obsidian-git"
+  "obsidian-git",
+  "mermaid-tools"
 ]

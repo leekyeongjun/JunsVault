@@ -11,10 +11,14 @@
             "id": "39fb517ef6b3fe55",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "2025-1/AT/AT Test.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "AT Test"
             }
           }
         ]
@@ -151,13 +155,23 @@
               "icon": "git-pull-request",
               "title": "Source Control"
             }
+          },
+          {
+            "id": "526c831a2b30c2db",
+            "type": "leaf",
+            "state": {
+              "type": "mermaid-toolbar-view",
+              "state": {},
+              "icon": "trident-custom",
+              "title": "Mermaid Toolbar"
+            }
           }
         ],
-        "currentTab": 4
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
-    "width": 266.5
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -169,11 +183,13 @@
       "command-palette:Open command palette": false,
       "obsidian-full-calendar:Open Full Calendar": false,
       "obsidian-excalidraw-plugin:Create new drawing": false,
-      "obsidian-git:Open Git source control": false
+      "obsidian-git:Open Git source control": false,
+      "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
-  "active": "3c93e12baa211e22",
+  "active": "526c831a2b30c2db",
   "lastOpenFiles": [
+    "2025-1/AT/AT Test.md",
     "2025-1/AT",
     "git test.md",
     "OS_project01_wiki_2019092824.pdf",
@@ -200,7 +216,6 @@
     "2025-1/OS/test.html",
     "2025-1/OS/lib/search-index.json",
     "2025-1/OS/lib/styles/theme.css",
-    "2025-1/OS/lib/styles/obsidian.css",
     "2025-1/교교교이/0407 Microteaching.md",
     "2025-1/OS/RISC-V ISA (Instruction Set Architecture).md",
     "Untitled.md",
