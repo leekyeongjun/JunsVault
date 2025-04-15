@@ -107,16 +107,30 @@ $M = (\{q_{0},q_{1},q_{2}\},\{0,1\},δ, q_{0}\{q_{1}\})$
 - State가 유한한 갯수이므로 **Finite** 하다.
 - 특정 String을 Accept/Unaccept 하기 때문에 **Accepter**이다.
 ### DFA Transition Graph
-```mermaid
-stateDiagram-v2
-    direction LR
-	[*] --> q0
-	q0 --> q0 : 0
-	q0 --> q1 : 1
-	q1 --> q0 : 0
-	q2 --> q2 : 0
-	q1 --> q2 : 1
-	q2 --> q1 : 1
+
+ ```dot
+digraph G {
+	rankdir = LR
+    // Set default node style
+    node [shape=circle, style=filled, color=black, fillcolor=white];
+
+    // Define nodes
+    q0;
+    q1 [shape=doublecircle];
+    q2;
+
+    // Define edges with labels
+    start [shape=point, style=invisible];
+
+	start -> q0
+    q0 -> q1 [label="1"];
+    q1 -> q0 [label="0"];
+    q0 -> q0 [label="0"];
+    q1 -> q2 [label="1"];
+    q2 -> q1 [label="1"];
+	q2 -> q2 [label="0"];
+}
+
 ```
 
 

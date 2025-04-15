@@ -19,20 +19,28 @@
 	</style>
 </head>
 <body>
-	<pre><code class="language-mermaid">stateDiagram-v2
-direction LR
+	<pre><code class="language-dot">digraph G {
+    // Set default node style
+    node [shape=circle, style=filled, color=black, fillcolor=white];
 
-classDef f font-weight:bold,stroke-width:4px,stroke:black
+    // Define nodes
+    a;
+    b;
+    c;
+    d;
+    e [shape=doublecircle]; // Node &quot;e&quot; as double circle
 
-[*] --&gt; q0
-state q0
-q0 --&gt; q1 : a
-state q1
-q1 --&gt; q2 : b
-state q2
+    // Define edges with labels
+    a -&gt; b [label=&quot;edge&quot;];
+    b -&gt; c [label=&quot;edge&quot;];
+    c -&gt; d [label=&quot;edge&quot;];
+    d -&gt; e [label=&quot;edge&quot;];
+    e -&gt; a [label=&quot;edge&quot;];
 
-class q1 f
-class q2 f
+    // Self-loop on &quot;a&quot;
+    a -&gt; a [label=&quot;edge&quot;];
+}
+
 </code></pre>
 
 </body>
