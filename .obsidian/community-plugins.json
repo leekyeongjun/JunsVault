@@ -2,9 +2,8 @@
   "quick-latex",
   "code-styler",
   "obsidian-enhancing-export",
-  "obsidian-plugin-toc",
   "obsidian-git",
+  "heading-level-indent",
   "mermaid-tools",
-  "text-snippets-obsidian",
-  "heading-level-indent"
+  "text-snippets-obsidian"
 ]

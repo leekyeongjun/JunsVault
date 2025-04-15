@@ -12,6 +12,7 @@ alphabet을 0개 이상 사용하여 만든 문자열
 특정 String에 속하는 String
 - Prefix : $w = abab$, prefix $p = \{a, ab, aba, abab\}$
 - Suffix : $w = abab$, suffix $s = \{b, ba, bab, baba\}$
+
 # Symbols Dealing With Language, Alphabet and String
 $w = a_{1}a_{2}a_{3}...a_{n}$
 $v =b_{1}b_{2}b_{3}...b_{m}$
@@ -32,8 +33,93 @@ $v =b_{1}b_{2}b_{3}...b_{m}$
 $L=\{a,aa,aab\}$
 - $a,aa,aab$ 각각을 sentence라고 한다.
 - $\overline{L} = Σ^{*}-L$
-- 
-# Three Basic Concepts & Deterministic Finite Accepters
+- $L^{R}= \{w^{R}:w ∈ L\}$
+- $|L| = 3$
+- $L^{n}=LLLLL....$
+- $L^{0}=\{λ\}\ne\{ \}$
+- $L^{*}=L^{0}∪L^{1}∪L^{2}∪...$
+- $L^{+}=L^{1}∪L^{2}∪L^{3}∪....$ 
+
+$L_{1}=\{a,aa\}$
+$L_{2}=\{b,bb\}$
+- $L_{1}L_{2} = \{ab,abb,aab,aabb\}$
+
+$|L_{1}| = n, (n \ge 0)$
+$|L_{2}| = m, (m\ge0)$
+- $|L_{1}L_{2}|\le nm$
+	- 중복되는 문자열이 있을 수 있기 때문이다.
+
+# Grammer
+$G = (V,T,S,P)$
+- Variables
+- Terminal Symbols
+- Start variables
+- Productions
+
+$G = (\{S\},\{a,b\},S,P)$
+$P:$
+- $S → aSb$
+- $S → λ$
+
+## Derivation
+$S ⇒ aSb ⇒ aaSbb ⇒ aabb$
+- $⇒$ - Derivation Arrow
+- $aaSbb$ - 이러한 꼴을 Sentential Form이라고 한다.
+- $aabb$ - Terminal을 다 소모한 상태로 Derivation이 완료되었으므로, 이를 Sentence라 하며, 이 Sentence는 Language에 포함된다.
+## Definition of Language with Grammer
+$L(G)=\{w ∈ T^{*}:S ⇒^{*}w\}$
+- Grammer $G$에 의해 생성되는 Language $L$은,
+- Start Symbol $S$로부터 만들수 있는 모든 string $w$의 집합이며,
+- $w$는 Terminal $T$의 원소로만 이뤄진다.
+## Language to Grammer 
+$L = \{a^{n}b^{n+1}:n\ge0\}$ 을 Grammer로 표현하려면?
+- $L = \{a^{n}b^{n},n\ge0\}$을 표현하는 Grammer의 뒤에 b하나만 추가하면 된다.
+- $P:$
+	- $S → Ab$ `여기서 b 추가함`
+	- $A → aAb| λ$ `기존 Grammer`
+
+하나의 Languague를 표현하는 서로 다른 여러 Grammer가 있을 수 있다.
+# Deterministic Finite Accepters (DFA)
+$M = (Q,Σ,δ,q_{0},F)$
+- $Q$ - Set of States
+- $Σ$ - Input alphabet
+- $δ$ - $Q \times Σ → Q$ (Transition Function)
+- $q_{0}$ - Initial State
+- $F ⊂ Q$ - Final States
+
+## Example
+$M = (\{q_{0},q_{1},q_{2}\},\{0,1\},δ, q_{0}\{q_{1}\})$
+- $δ(q_{n},t) = q_{m}$
+	- $t$ is terminal
+- $δ^{*}(q_{0},w)=q_{2}$
+	- $w$ is string
+
+| Init  | transition | Destination |
+| ----- | ---------- | ----------- |
+| $q_0$ | 0          | $q_0$       |
+| $q_0$ | 1          | $q_1$       |
+| $q_1$ | 0          | $q_0$       |
+| $q_1$ | 1          | $q_2$       |
+| $q_2$ | 0          | $q_2$       |
+| $q_2$ | 1          | $q_1$       |
+- 모든 Input alphabet 에 대한 Edge가 존재해야 함.
+- Input alphabet에 따라 다음 State가 하나로 결정되기 때문에 **deterministic** 하다.
+- State가 유한한 갯수이므로 **Finite** 하다.
+- 특정 String을 Accept/Unaccept 하기 때문에 **Accepter**이다.
+### DFA Transition Graph
+```mermaid
+stateDiagram-v2
+    direction LR
+	[*] --> q0
+	q0 --> q0 : 0
+	q0 --> q1 : 1
+	q1 --> q0 : 0
+	q2 --> q2 : 0
+	q1 --> q2 : 1
+	q2 --> q1 : 1
+```
+
+
 # Regular Languages & NonDeterministic Finite Accepters
 # Equivalence of Deterministic and Nondeterministic Finite Accepter
 # Reduction of the Number of States in Finite Automata

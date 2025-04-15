@@ -157,7 +157,7 @@
             }
           },
           {
-            "id": "ddbff9a3a0566c4c",
+            "id": "5a8408279496e3ac",
             "type": "leaf",
             "state": {
               "type": "mermaid-toolbar-view",
@@ -171,8 +171,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -182,14 +181,11 @@
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "obsidian-full-calendar:Open Full Calendar": false,
-      "obsidian-excalidraw-plugin:Create new drawing": false,
       "obsidian-git:Open Git source control": false,
-      "mermaid-tools:Open Mermaid Toolbar": false,
-      "publish:Publish changes...": false
+      "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
-  "active": "39fb517ef6b3fe55",
+  "active": "5a8408279496e3ac",
   "lastOpenFiles": [
     "2025-1/OS/OS_project1.md",
     "2025-1/OS/RISC-V ISA (Instruction Set Architecture).md",
