@@ -82,8 +82,36 @@ $A → aaBb$
 $B → bbAa$
 $A → λ$
 
-$\{L = ab(bb)^{n}bba(ba)^{n}, n \ge 0\}$
+- $B → bba|bbaaBba$
+	- $\{L = ab(bbaa)^{n}bba(ba)^{n}, n \ge 0\}$
 
-
+다음 Language가 만드는 Grammer는?
 $L = \{a^{n}b^{m}:n \ne m\}$
+> a의 갯수와 b의 갯수가 다르다는 것은, a의 갯수보다 b의 갯수가 많거나, 혹은 그 반대를 의미한다.
 
+Step 1) a의 갯수가 b의 갯수보다 많은 Language를 생성하는 Grammer
+$S → AS_{1}$
+$S_{1}→ aS_{1}b| λ$
+$A → aA|a$
+
+Step 2) 이를 바탕으로, a의 갯수와 b의 갯수가 서로 다른 Language를 생성하는 Grammer
+$S →AS_{1}|S_{1}B$
+$S_{1}→aS_{1}b| λ$
+$A → aA|a$
+$B → bB|b$
+
+다음 Grammer가 생성하는 Language는?
+$S → aSb|SS| λ |bSa$
+> a의 갯수와 b의 갯수가 같은 Language.
+
+만약 이 Grammer를 다음과 같이 바꾼다면?
+$S → aSb|SS| λ$
+
+이 Grammer는 아래의 string을 만들 수 없다.
+- $ba$ (b로 시작하는 모든 language) 
+- $abba$ 
+
+정의하자면,
+$n_{a}(w) = n_{b}(w)$ `a의 갯수와 b의 갯수가 같다.`
+$n_{a}(v) \ge n_{b}(v)$ ``
+$v$ is any prefix of $w$
