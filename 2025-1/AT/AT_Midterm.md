@@ -59,5 +59,31 @@ $L ∪ L' = L(a^{*}b^{*})$
 		- $L$ is regular when $L'$ is regular.
 - But $L'$ is not regular, so $L$ is also not regular.
 ---
-# Context - free Grammer
+# Context-free Grammer
 > Stronger grammer than regular grammer
+
+$G = (\{S\}, \{a,b\}, S, P)$
+- $S → aSa$
+- $S → bSb$
+- $S → λ$
+- Why it is context free? : 문맥에 영향을 받지 않기 때문.
+	- 왼쪽에 Terminal이 나오지 않는다.
+- Derivation
+	- $S ⇒ aSa ⇒ aaSaa ⇒ aabSbaa ⇒ aabbaa$
+- Context free language로는 Regular Language가 표현하지 못하는 언어도 표현할 수 있다.
+
+Opposite : Context-sensitive
+- $aSb → acb$
+- $aSc → adc$
+
+다음 Grammer가 만드는 Language는?
+$S → abB$
+$A → aaBb$
+$B → bbAa$
+$A → λ$
+
+$\{L = ab(bb)^{n}bba(ba)^{n}, n \ge 0\}$
+
+
+$L = \{a^{n}b^{m}:n \ne m\}$
+
