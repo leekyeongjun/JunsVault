@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>AT Test</title>
+	<style>
+		/* Basic styles for readability */
+		body {
+			font-family: sans-serif;
+			max-width: 800px;
+			margin: 2em auto;
+			padding: 0 1em;
+			line-height: 1.6;
+		}
+		img { max-width: 100%; height: auto; }
+		pre { background-color: #f4f4f4; padding: 1em; overflow-x: auto; }
+		code { font-family: monospace; }
+	</style>
+</head>
+<body>
+	<pre><code class="language-mermaid">stateDiagram-v2
+direction LR
+
+classDef f font-weight:bold,stroke-width:4px,stroke:black
+
+[*] --&gt; q0
+state q0
+q0 --&gt; q1 : a
+state q1
+q1 --&gt; q2 : b
+state q2
+
+class q1 f
+class q2 f
+</code></pre>
+
+</body>
+</html>
