@@ -72,11 +72,11 @@ $G = (\{S\}, \{a,b\}, S, P)$
 	- $S ⇒ aSa ⇒ aaSaa ⇒ aabSbaa ⇒ aabbaa$
 - Context free language로는 Regular Language가 표현하지 못하는 언어도 표현할 수 있다.
 
-Opposite : Context-sensitive
+Opposite : **Context-sensitive**
 - $aSb → acb$
 - $aSc → adc$
 
-다음 Grammer가 만드는 Language는?
+### **다음 Grammer가 만드는 Language는?**
 $S → abB$
 $A → aaBb$
 $B → bbAa$
@@ -85,33 +85,150 @@ $A → λ$
 - $B → bba|bbaaBba$
 	- $\{L = ab(bbaa)^{n}bba(ba)^{n}, n \ge 0\}$
 
-다음 Language가 만드는 Grammer는?
+### **다음 Language가 만드는 Grammer는?**
 $L = \{a^{n}b^{m}:n \ne m\}$
 > a의 갯수와 b의 갯수가 다르다는 것은, a의 갯수보다 b의 갯수가 많거나, 혹은 그 반대를 의미한다.
 
-Step 1) a의 갯수가 b의 갯수보다 많은 Language를 생성하는 Grammer
+**Step 1) a의 갯수가 b의 갯수보다 많은 Language를 생성하는 Grammer**
 $S → AS_{1}$
 $S_{1}→ aS_{1}b| λ$
 $A → aA|a$
 
-Step 2) 이를 바탕으로, a의 갯수와 b의 갯수가 서로 다른 Language를 생성하는 Grammer
+**Step 2) 이를 바탕으로, a의 갯수와 b의 갯수가 서로 다른 Language를 생성하는 Grammer**
 $S →AS_{1}|S_{1}B$
 $S_{1}→aS_{1}b| λ$
 $A → aA|a$
 $B → bB|b$
 
-다음 Grammer가 생성하는 Language는?
+### **다음 Grammer가 생성하는 Language는?**
 $S → aSb|SS| λ |bSa$
 > a의 갯수와 b의 갯수가 같은 Language.
 
-만약 이 Grammer를 다음과 같이 바꾼다면?
+**만약 이 Grammer를 다음과 같이 바꾼다면?**
 $S → aSb|SS| λ$
 
-이 Grammer는 아래의 string을 만들 수 없다.
+**이 Grammer는 아래의 string을 만들 수 없다.**
 - $ba$ (b로 시작하는 모든 language) 
 - $abba$ 
 
-정의하자면,
-$n_{a}(w) = n_{b}(w)$ `a의 갯수와 b의 갯수가 같다.`
-$n_{a}(v) \ge n_{b}(v)$ ``
-$v$ is any prefix of $w$
+**정의하자면,**
+$n_{a}(w) = n_{b}(w)$ `1. a의 갯수와 b의 갯수가 같다.`
+$n_{a}(v) \ge n_{b}(v)$  `3. a의 갯수가 항상 b의 갯수보다 크거나 같다.`
+$v$ is any prefix of $w$ `2. 이 Grammer로 인해 만들어지는 String의 prefix v는`
+
+만약 $a$가 열린 괄호, $b$가 닫힌 괄호라면, 이 Grammer은 legal 한 괄호 표현법을 나타내는 Grammer이다.
+
+#### 증명
+$aSb$ 가 terminal을 생성하는 유일한 문법이므로, $a$와 $b$의 갯수는 항상 같다 (`1.`) 
+$a$가 항상 $b$보다 먼저 나오기 때문에, Prefix항상 $a$의 갯수가 많다. (`2.3.`)
+
+## **Left-most Derivation and Right-most Derivation**
+
+특정 Grammer가 주어졌을 때, Sentential form의 왼쪽 Variable부터 순차적으로 Derivation 하는 것을 
+**Left-most Derivation**이라고 한다.
+
+### *Example*
+$S → aAB$
+$A → bBb$
+$B →A| λ$
+
+Derivation (**Left-Most**)
+$S ⇒ aAB ⇒ abBbB ⇒abAbB ⇒ abbBbbB ⇒abbbbB ⇒ abbbb$
+
+Derivation (**Right-Most**)
+$S ⇒ aAB ⇒ aAA ⇒ abBbA ⇒ abBbbBb ⇒ abBbbb ⇒ abbbb$
+
+같은 String을 Derivation 하는 **여러가지 Derivation** 방법이 있다.
+
+## Parse Tree
+Derivation 과정을 Child Node로 표현한 것
+### $S ⇒ aAB ⇒ abBbB ⇒ abBbA ⇒ abbBbbBb ⇒ abbbBb ⇒ abbbb$
+
+```mermaid
+graph TD
+	1((S));
+	2((a));
+	3((A));
+	4((b));
+	5((B));
+	6((λ));
+	7((b));
+	8((B));
+	9((A));
+	10((b));
+	11((B));
+	12((λ));
+	13((b));
+
+	1 --> 2
+	1 --> 3
+	3 --> 4
+	3 --> 5
+	5 --> 6
+	3 --> 7
+	1 --> 8
+	8 --> 9
+	9 --> 10
+	9 --> 11
+	11 --> 12
+	9 --> 13
+```
+
+> Parse Tree 역시 derivation의 갯수 많큼 많아질 수 있다.
+### $S ⇒ aAB ⇒ abBbB ⇒abAbB ⇒ abbBbbB ⇒abbbbB ⇒ abbbb$
+
+```mermaid
+graph TD
+	1((S));
+	2((a));
+	3((A));
+	4((B));
+	
+	5((b));
+	6((B));
+	7((b));
+	8((B));
+	
+	9((A));
+	
+	10((b));
+	11((B));
+	12((b));
+	13((λ));
+	14((λ));
+
+	1 --> 2
+	1 --> 3
+	1 --> 4
+	
+	3 --> 5
+	5 --> 6
+	3 --> 7
+	6 --> 9
+	3 --> 8
+
+	9 --> 10
+	9 --> 11
+	9 --> 12
+
+	8 --> 13
+	11 --> 14
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

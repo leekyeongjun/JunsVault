@@ -157,7 +157,7 @@
             }
           },
           {
-            "id": "84d494a733ada7af",
+            "id": "ddbff9a3a0566c4c",
             "type": "leaf",
             "state": {
               "type": "mermaid-toolbar-view",
@@ -171,8 +171,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 281.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -185,20 +184,22 @@
       "obsidian-full-calendar:Open Full Calendar": false,
       "obsidian-excalidraw-plugin:Create new drawing": false,
       "obsidian-git:Open Git source control": false,
-      "mermaid-tools:Open Mermaid Toolbar": false
+      "mermaid-tools:Open Mermaid Toolbar": false,
+      "publish:Publish changes...": false
     }
   },
-  "active": "39fb517ef6b3fe55",
+  "active": "ddbff9a3a0566c4c",
   "lastOpenFiles": [
-    "2025-1/AT/AT Test.md",
+    "2025-1/OS/OS_project1.md",
+    "2025-1/OS/RISC-V ISA (Instruction Set Architecture).md",
+    "2025-1/OS/OS_project01_wiki_2019092824.md",
     "2025-1/AT/AT_Midterm.md",
+    "OS_project01_wiki_2019092824.pdf",
+    "2025-1/AT/AT Test.md",
     "2025-1/AT/index.html",
     "2025-1/AT",
     "git test.md",
-    "OS_project01_wiki_2019092824.pdf",
     "졸업사정 정리.md",
-    "2025-1/OS/OS_project01_wiki_2019092824.md",
-    "2025-1/OS/OS_project1.md",
     "2025-1/OS/OS_project01_wiki_2019092824.html",
     "Introduction.md",
     "2025-1/OS/OS_project01_wiki_2019092824.pdf",
@@ -219,7 +220,6 @@
     "2025-1/OS/test.html",
     "2025-1/OS/lib/search-index.json",
     "2025-1/교교교이/0407 Microteaching.md",
-    "2025-1/OS/RISC-V ISA (Instruction Set Architecture).md",
     "Untitled.md",
     "2025-1/OS/xv6_lee/kernel/defs.h.md",
     "2025-1/OS/xv6_lee/kernel/console.c.md",
@@ -234,7 +234,6 @@
     "2025-1/OPIC/오픽, 어떤 시험인가요 - 입문자를 위한 15분 총정리_해커스오픽 클로이.md",
     "2025-1/OPIC/Clara_8강 - 해변,캠핑가기.md",
     "2025-1/OPIC/Clara_7강 - 공원가기.md",
-    "2025-1/OPIC/Clara_6강 - 영화 관람.md",
-    "2025-1/OPIC/Clara_1강 - 자기소개.md"
+    "2025-1/OPIC/Clara_6강 - 영화 관람.md"
   ]
 }
