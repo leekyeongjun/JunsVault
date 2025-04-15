@@ -16,5 +16,10 @@
       ],
       "key": "C"
     }
-  ]
+  ],
+  "obsidian-excalidraw-plugin:save": [],
+  "obsidian-excalidraw-plugin:insert-link-to-element": [],
+  "obsidian-excalidraw-plugin:insert-link": [],
+  "editor:toggle-checklist-status": [],
+  "editor:save-file": []
 }

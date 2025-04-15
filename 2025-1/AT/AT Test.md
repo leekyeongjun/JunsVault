@@ -10,11 +10,9 @@ classDef f font-weight:bold,stroke-width:4px,stroke:black
 state q0
 q0 --> q1 : a
 state q1
-q1 --> q2 : b
+q1 --> q2 : b 
 state q2
 
 class q1 f
 class q2 f
 ```
-$$\text
-lambda$$
