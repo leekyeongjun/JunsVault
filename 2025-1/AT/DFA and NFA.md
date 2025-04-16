@@ -295,3 +295,18 @@ digraph G { rankdir = LR; node [shape=circle, style=filled, color=black, fillcol
 | 0             | λ      | 0,1 3,5       |
 | 1             | 0      | NN, FF        |
 |               | 1      | FF, FF, Stop. |
+```dot 
+digraph G { rankdir = LR; node [shape=circle, style=filled, color=black, fillcolor=white]; 
+	01; 
+	
+	35 [shape=doublecircle];
+	
+	start [shape=point, style=invisible]; 
+	
+	start -> 01;
+	01 -> 01 [label="0"];
+	01 -> 35 [label="1"];
+	35 -> 35 [label="0,1"];
+}
+ ```
+ 
