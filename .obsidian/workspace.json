@@ -13,12 +13,32 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2025-1/교교교이/0407 Microteaching.md",
+                "file": "MyWebsite/CodingTest/2011.cpp.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "0407 Microteaching"
+              "title": "2011.cpp"
+            }
+          }
+        ]
+      },
+      {
+        "id": "cbd46b5216048f2f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "fd8d54444732201c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "MyWebsite/CodingTest/CodingTest_Gateway.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "CodingTest_Gateway"
             }
           }
         ]
@@ -190,22 +210,25 @@
   },
   "active": "0baed27280068d84",
   "lastOpenFiles": [
-    "2025-1/교교교이/SLP.md",
-    "2025-1/AT/Three Basic Concepts.md",
+    "MyWebsite/CodingTest/CodingTest_Gateway.md",
+    "MyWebsite/CodingTest/2011.cpp.md",
     "2025-1/AT/DFA and NFA.md",
-    "2025-1/AT/AT_Midterm.md",
     "MyWebsite/Welcome to JunsBlog.md",
+    "MyWebsite/CodingTest",
     "MyWebsite/imgs/Title_Resume.png",
     "MyWebsite/imgs/Title_TutorialCourses.jpg",
-    "MyWebsite/imgs/Title_notes.jpg",
     "MyWebsite/imgs/Title_software.jpg",
+    "MyWebsite/imgs/Title_notes.jpg",
+    "2025-1/교교교이/0407 Microteaching.md",
+    "2025-1/교교교이/SLP.md",
+    "2025-1/AT/Three Basic Concepts.md",
+    "2025-1/AT/AT_Midterm.md",
     "MyWebsite/imgs/Title_Tutorial Cources.jpg.crdownload",
     "MyWebsite/imgs/Title_software.jpg.crdownload",
     "MyWebsite/imgs/Title_notes.jpg.crdownload",
     "MyWebsite/imgs",
     "MyWebsite/새 폴더",
     "MyWebsite",
-    "2025-1/교교교이/0407 Microteaching.md",
     "AT_Midterm.pdf",
     "2025-1/AT/AT Test.md",
     "2025-1/OS/OS_project1.md",
@@ -213,7 +236,6 @@
     "2025-1/OS/OS_project01_wiki_2019092824.md",
     "OS_project01_wiki_2019092824.pdf",
     "2025-1/AT/index.html",
-    "2025-1/AT",
     "git test.md",
     "졸업사정 정리.md",
     "Introduction.md",
@@ -233,8 +255,6 @@
     "2025-1/OPIC/Clara_24강 - 롤플레이 - 질문하기.md",
     "2025-1/OPIC/Clara_23강 - 돌발 - (집안일).md",
     "2025-1/OPIC/Clara_23강 - 돌발 - (인터넷 서핑).md",
-    "2025-1/OPIC/Clara_23강 - 돌발 - (외식).md",
-    "2025-1/OPIC/Clara_23강 - 돌발 - (건강, 병원).md",
-    "2025-1/OPIC/오픽, 어떤 시험인가요 - 입문자를 위한 15분 총정리_해커스오픽 클로이.md"
+    "2025-1/OPIC/Clara_23강 - 돌발 - (외식).md"
   ]
 }
