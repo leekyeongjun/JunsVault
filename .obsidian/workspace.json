@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2025-1/교교교이/0407 Microteaching.md",
+                "file": "2025-1/AT/AT_Midterm.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "0407 Microteaching"
+              "title": "AT_Midterm"
             }
           }
         ]
@@ -188,6 +188,7 @@
   },
   "active": "39fb517ef6b3fe55",
   "lastOpenFiles": [
+    "2025-1/교교교이/0407 Microteaching.md",
     "2025-1/교교교이/SLP.md",
     "2025-1/AT/AT_Midterm.md",
     "AT_Midterm.pdf",
@@ -218,7 +219,6 @@
     "2025-1/OS/Untitled",
     "2025-1/OS/OS_assignment_12754_2019092824.md",
     "2025-1/OS/test.html",
-    "2025-1/교교교이/0407 Microteaching.md",
     "Untitled.md",
     "2025-1/OS/xv6_lee/kernel/defs.h.md",
     "2025-1/OS/xv6_lee/kernel/console.c.md",
