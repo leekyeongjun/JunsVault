@@ -133,8 +133,70 @@ digraph G {
 
 ```
 
+## Define Language By DFA
+$L(M) = \{w ∈ Σ^{*}:δ^{*}(g_{0},w)∈F\}$
+## 특정 문자열을 받아들이는/받아들이지 않는 DFA 만들기
+001을 받아들이지 않는 문자열 만들기
+### **Step 1.** 001을 받아들이는 DFA를 만든다.
+ ```dot 
+ digraph G { rankdir = LR node [shape=circle, style=filled, color=black, fillcolor=white]; 
+ q0; 
+ q1;
+ q2; 
+ q3 [shape=doublecircle]; 
+ start [shape=point, style=invisible]; 
+ 
+ start -> q0; 
+ q0 -> q1 [label="0"]; 
+ q1 -> q2 [label="0"]; 
+ q2 -> q3 [label="1"]; 
+ } 
+ ```
+### **Step 2.** DFA 요건을 만족시킨다.
+```dot 
+ digraph G { rankdir = LR node [shape=circle, style=filled, color=black, fillcolor=white]; 
+ q0; 
+ q1;
+ q2; 
+ q3 [shape=doublecircle]; 
+ start [shape=point, style=invisible]; 
+ 
+ start -> q0; 
+ q0 -> q1 [label="0"]; 
+ q0 -> q0 [label="1"]; 
+ q1 -> q2 [label="0"];
+ q1 -> q0 [label="1"];
+ q2 -> q3 [label="1"];
+ q2 -> q2 [label="0"];
+ q3 -> q3 [label="0,1"] 
+ }
+ ```
+### **Step 3.** Final을 Non-Final로 바꾼다.
+```dot 
+ digraph G { rankdir = LR node [shape=circle, style=filled, color=black, fillcolor=white]; 
+ q0[shape=doublecircle]; 
+ q1[shape=doublecircle];
+ q2[shape=doublecircle]; 
+ q3 ; 
+ start [shape=point, style=invisible]; 
+ 
+ start -> q0; 
+ q0 -> q1 [label="0"]; 
+ q0 -> q0 [label="1"]; 
+ q1 -> q2 [label="0"];
+ q1 -> q0 [label="1"];
+ q2 -> q3 [label="1"];
+ q2 -> q2 [label="0"];
+ q3 -> q3 [label="0,1"] 
+ }
+ ```
+ 
+# Regular Languages 
+$L$을 Accept하는 DFA가 있다면, $L$은 Regular 하다.
+즉 $L$이 Regular 한지 아닌지 파악하기 위해, $L$의 DFA를 만들어 보면 알 수 있다.
+# Non-Deterministic Finite Accepters
+$M = (Q,Σ,δ,F,q_{0})$
 
-# Regular Languages & NonDeterministic Finite Accepters
 # Equivalence of Deterministic and Nondeterministic Finite Accepter
 # Reduction of the Number of States in Finite Automata
 # Reduction of the Number of States in Finite Automata & Regular Expressions

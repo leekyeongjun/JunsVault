@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "55e49e6caa2a5a0b",
+        "id": "e1c215888ea4c21e",
         "type": "tabs",
         "children": [
           {
-            "id": "39fb517ef6b3fe55",
+            "id": "0baed27280068d84",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -183,14 +183,27 @@
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
       "obsidian-git:Open Git source control": false,
-      "mermaid-tools:Open Mermaid Toolbar": false
+      "mermaid-tools:Open Mermaid Toolbar": false,
+      "obsidian-excalidraw-plugin:New drawing": false,
+      "obsidian-full-calendar:Open Full Calendar": false
     }
   },
-  "active": "39fb517ef6b3fe55",
+  "active": "0baed27280068d84",
   "lastOpenFiles": [
+    "MyWebsite/Welcome to JunsBlog.md",
+    "MyWebsite/imgs/Title_Resume.png",
+    "MyWebsite/imgs/Title_TutorialCourses.jpg",
+    "MyWebsite/imgs/Title_notes.jpg",
+    "MyWebsite/imgs/Title_software.jpg",
+    "MyWebsite/imgs/Title_Tutorial Cources.jpg.crdownload",
+    "MyWebsite/imgs/Title_software.jpg.crdownload",
+    "MyWebsite/imgs/Title_notes.jpg.crdownload",
+    "MyWebsite/imgs",
+    "MyWebsite/새 폴더",
+    "2025-1/AT/AT_Midterm.md",
+    "MyWebsite",
     "2025-1/교교교이/0407 Microteaching.md",
     "2025-1/교교교이/SLP.md",
-    "2025-1/AT/AT_Midterm.md",
     "AT_Midterm.pdf",
     "2025-1/AT/AT Test.md",
     "2025-1/OS/OS_project1.md",
@@ -201,24 +214,14 @@
     "2025-1/AT",
     "git test.md",
     "졸업사정 정리.md",
-    "2025-1/OS/OS_project01_wiki_2019092824.html",
     "Introduction.md",
-    "2025-1/OS/OS_project01_wiki_2019092824.pdf",
-    "2025-1/OS/OS_project01_wiki_2019092824_tmp.html",
-    "2025-1/OS/index.html",
     "Pasted image 20250412202650.png",
     "Pasted image 20250412202444.png",
     "Pasted image 20250412202325.png",
     "Pasted image 20250412202242.png",
     "Pasted image 20250412201654.png",
     "Pasted image 20250412201321.png",
-    "Pasted image 20250412191735.png",
-    "Pasted image 20250412191724.png",
-    "Pasted image 20250412191709.png",
-    "Pasted image 20250412191702.png",
-    "2025-1/OS/Untitled",
     "2025-1/OS/OS_assignment_12754_2019092824.md",
-    "2025-1/OS/test.html",
     "Untitled.md",
     "2025-1/OS/xv6_lee/kernel/defs.h.md",
     "2025-1/OS/xv6_lee/kernel/console.c.md",
@@ -231,8 +234,6 @@
     "2025-1/OPIC/Clara_23강 - 돌발 - (외식).md",
     "2025-1/OPIC/Clara_23강 - 돌발 - (건강, 병원).md",
     "2025-1/OPIC/오픽, 어떤 시험인가요 - 입문자를 위한 15분 총정리_해커스오픽 클로이.md",
-    "2025-1/OPIC/Clara_8강 - 해변,캠핑가기.md",
-    "2025-1/OPIC/Clara_7강 - 공원가기.md",
-    "2025-1/OPIC/Clara_6강 - 영화 관람.md"
+    "2025-1/OPIC/Clara_8강 - 해변,캠핑가기.md"
   ]
 }
