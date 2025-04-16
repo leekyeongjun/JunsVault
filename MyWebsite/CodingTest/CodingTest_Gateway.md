@@ -1,5 +1,13 @@
+---
+sticker: lucide//database
+---
 ```dataview
-table Category, Difficulty, Solved, date 
-from "CodingTest/"
+TABLE Category, Difficulty, Solved, date 
+from #CodingTest 
 ```
+
+
+
+
+
 
