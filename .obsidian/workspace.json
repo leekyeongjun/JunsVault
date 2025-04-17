@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "MyWebsite/Welcome to JunsBlog.md",
+                "file": "MyWebsite/JunsBlog.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Welcome to JunsBlog"
+              "title": "JunsBlog"
             }
           },
           {
@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "졸업사정 정리.md",
+                "file": "MyWebsite/JunsBlog.md",
                 "mode": "source",
-                "source": false
+                "source": true
               },
               "icon": "lucide-file",
-              "title": "졸업사정 정리"
+              "title": "JunsBlog"
             }
           }
         ],
@@ -88,8 +88,22 @@
               "icon": "lucide-bookmark",
               "title": "Bookmarks"
             }
+          },
+          {
+            "id": "75035a1286411198",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -188,8 +202,8 @@
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
       "obsidian-git:Open Git source control": false,
-      "mermaid-tools:Open Mermaid Toolbar": false,
-      "obsidian-excalidraw-plugin:New drawing": false
+      "obsidian-excalidraw-plugin:New drawing": false,
+      "obsidian-full-calendar:Open Full Calendar": false
     }
   },
   "floating": {
@@ -210,12 +224,12 @@
                 "state": {
                   "type": "markdown",
                   "state": {
-                    "file": "MyWebsite/Welcome to JunsBlog.md",
-                    "mode": "source",
+                    "file": "MyWebsite/JunsBlog.md",
+                    "mode": "preview",
                     "source": false
                   },
                   "icon": "lucide-file",
-                  "title": "Welcome to JunsBlog"
+                  "title": "JunsBlog"
                 }
               }
             ]
@@ -231,19 +245,23 @@
       }
     ]
   },
-  "active": "5846e9e24e3fb644",
+  "active": "321bc02b656f7de5",
   "lastOpenFiles": [
-    "MyWebsite/Welcome to JunsBlog.md",
-    "MyWebsite/CodingTest/Two Pointer.md",
-    "MyWebsite/CodingTest/11659.md",
-    "MyWebsite/CodingTest/구간합.md",
-    "MyWebsite/CodingTest/CodingTest_Gateway.md",
+    "MyWebsite/MyWebsite.md",
+    "MyWebsite/Notes/Notes.md",
+    "MyWebsite/Notes",
+    "MyWebsite/JunsBlog.md",
+    "MyWebsite/Notes/CodingTest/CodingTest_Gateway.md",
+    "MyWebsite/Notes/CodingTest/11659.md",
+    "졸업사정 정리.md",
+    "MyWebsite/Notes/CodingTest/Two Pointer.md",
+    "MyWebsite/Notes/CodingTest/구간합.md",
     "2025-1/AT/AT_Midterm.md",
     "AT_Midterm.pdf",
     "OS_project01_wiki_2019092824.pdf",
     "Tags",
     "2025-1/AT/DFA and NFA.md",
-    "MyWebsite/CodingTest",
+    "MyWebsite/Notes/CodingTest",
     "MyWebsite/imgs/Title_Resume.png",
     "MyWebsite/imgs/Title_TutorialCourses.jpg",
     "MyWebsite/imgs/Title_software.jpg",
@@ -256,13 +274,11 @@
     "MyWebsite/imgs/Title_notes.jpg.crdownload",
     "MyWebsite/imgs",
     "MyWebsite/새 폴더",
-    "MyWebsite",
     "2025-1/AT/AT Test.md",
     "2025-1/OS/OS_project1.md",
     "2025-1/OS/RISC-V ISA (Instruction Set Architecture).md",
     "2025-1/OS/OS_project01_wiki_2019092824.md",
     "git test.md",
-    "졸업사정 정리.md",
     "Introduction.md",
     "Pasted image 20250412202650.png",
     "Pasted image 20250412202444.png",
@@ -276,7 +292,6 @@
     "2025-1/OS/xv6_lee/kernel/console.c.md",
     "2025-1/OS/xv6_lee/kernel/buf.h.md",
     "2025-1/OS/xv6_lee/kernel/bio.c.md",
-    "2025-1/OPIC/Clara_4강 - 사는 곳.md",
-    "2025-1/OPIC/Clara_24강 - 롤플레이 - 질문하기.md"
+    "2025-1/OPIC/Clara_4강 - 사는 곳.md"
   ]
 }

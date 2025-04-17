@@ -3,13 +3,12 @@
   "code-styler",
   "obsidian-enhancing-export",
   "obsidian-git",
-  "mermaid-tools",
   "text-snippets-obsidian",
-  "obsidian-graphviz",
   "obsidian-style-settings",
   "obsidian-excalidraw-plugin",
   "obsidian-full-calendar",
   "dataview",
   "obsidian-icon-folder",
-  "make-md"
+  "make-md",
+  "obsidian-minimal-settings"
 ]
