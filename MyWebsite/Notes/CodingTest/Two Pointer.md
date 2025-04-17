@@ -1,3 +1,13 @@
+---
+
+Category: Definition
+Difficulty: " "
+Solved: " "
+date: 2025-04-16
+sticker: emoji//1f4da
+tags:
+  - CodingTest
+---
 
 ```
 sum = 1
