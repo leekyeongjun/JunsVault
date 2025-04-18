@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "MyWebsite/Notes/CodingTest/Two Pointer.md",
+                "file": "2025-1/AT/AT_Midterm.md",
                 "mode": "source",
-                "source": true
+                "source": false
               },
               "icon": "lucide-file",
-              "title": "Two Pointer"
+              "title": "AT_Midterm"
             }
           }
         ]
@@ -95,7 +95,7 @@
             }
           },
           {
-            "id": "347b683a0c7a5c9c",
+            "id": "f9e562dd939696dc",
             "type": "leaf",
             "state": {
               "type": "mk-path-view",
@@ -208,10 +208,11 @@
       "obsidian-full-calendar:Open Full Calendar": false
     }
   },
-  "active": "1f455fddc0112ba7",
+  "active": "f9e562dd939696dc",
   "lastOpenFiles": [
-    "MyWebsite/JunsBlog.md",
+    "AT_Midterm.pdf",
     "MyWebsite/Notes/CodingTest/Two Pointer.md",
+    "MyWebsite/JunsBlog.md",
     "MyWebsite/Notes/CodingTest/구간합.md",
     "MyWebsite/Notes/CodingTest/11659.md",
     "MyWebsite/MyWebsite.md",
@@ -220,7 +221,6 @@
     "MyWebsite/Notes/CodingTest/CodingTest_Gateway.md",
     "졸업사정 정리.md",
     "2025-1/AT/AT_Midterm.md",
-    "AT_Midterm.pdf",
     "OS_project01_wiki_2019092824.pdf",
     "Tags",
     "2025-1/AT/DFA and NFA.md",
@@ -254,7 +254,6 @@
     "2025-1/OS/xv6_lee/kernel/defs.h.md",
     "2025-1/OS/xv6_lee/kernel/console.c.md",
     "2025-1/OS/xv6_lee/kernel/buf.h.md",
-    "2025-1/OS/xv6_lee/kernel/bio.c.md",
-    "2025-1/OPIC/Clara_4강 - 사는 곳.md"
+    "2025-1/OS/xv6_lee/kernel/bio.c.md"
   ]
 }
